@@ -54,20 +54,12 @@ function decode(expr) {
 
     for (let i = 0; i < symbolArr.length; i++) {
         xArr = symbolArr[i].split('')
-        console.log(xArr);
+        var morseArr = ''
         for (let i = 0; i < 10; i++) {
           xArr[0] == '0' ? xArr.splice(0,1) : null   
       }
-      symbolArr[i] = xArr.join('');
-      console.log(symbolArr[i]);
-      }
-      console.log(symbolArr);
-
-      for (let i = 0; i < symbolArr.length; i++){
-        xArr = symbolArr[i].split('')
-        var morseArr = ''
         for (let y = 0; y < 10; y+=2){
-          xArr[y+1] == '1' ? morseArr+= '-' : xArr[y+1] === '0'? morseArr+= '.' : morsAarr = ' ';
+          xArr[y+1] == '1' ? morseArr+= '-' : xArr[y+1] === '0'? morseArr+= '.' : morseAarr = ' ';
         }
         symbolArr[i] = morseArr;
       }
